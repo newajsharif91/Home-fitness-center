@@ -23,13 +23,13 @@ const Sidepart = ({ cart }) => {
   const [times, setTimes] = useState([]);
 
   useEffect(() => {
-    const storedData = localStorage.getItem("breakTime");
+    const storedData = localStorage.getItem("fhakatime");
     setTimes(storedData);
   }, []);
 
   const handleAddBreak = (needTimespera) => {
     setTimes(needTimespera);
-    localStorage.setItem("breakTime", needTimespera);
+    localStorage.setItem("fhakatime", needTimespera);
     setTimes(setTimes);
   };
 
