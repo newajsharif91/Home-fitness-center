@@ -3,9 +3,9 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "./Cards.css";
 
-const Cards = (props) => {
-  const { id, gymImg, name, time } = props.datas;
-  const { handleClick } = props;
+const Cards = ({ datas, handleClick }) => {
+  // const { datas, handleClick } = props;
+  const { id, gymImg, name, time } = datas;
   return (
     <div>
       <Card style={{ width: "18rem" }} className="card">
@@ -13,7 +13,11 @@ const Cards = (props) => {
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>Time Required : {time} m</Card.Text>
-          <Button variant="primary" className="card-btn">
+          <Button
+            onClick={() => handleClick(datas)}
+            variant="primary"
+            className="card-btn"
+          >
             Complete
           </Button>
         </Card.Body>

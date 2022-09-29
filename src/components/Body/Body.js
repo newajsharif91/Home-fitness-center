@@ -6,13 +6,17 @@ import "./Body.css";
 
 const Body = () => {
   const [datas, setSdatas] = useState([]);
+  const [cart, setCart] = useState([]);
   useEffect(() => {
     fetch("data.JSON")
       .then((response) => response.json())
       .then((data) => setSdatas(data));
   }, []);
-  const handleClick = () => {
-    console.log("click");
+  const handleClick = (datas) => {
+    // console.log(datas.time);
+    const newCart = [...cart, datas];
+    setCart(newCart);
+    console.log(newCart);
   };
   return (
     <div className="body-container">
@@ -22,7 +26,7 @@ const Body = () => {
         ))}
       </div>
       <div className="body-container-left">
-        <Sidepart></Sidepart>
+        <Sidepart cart={cart}></Sidepart>
       </div>
     </div>
   );

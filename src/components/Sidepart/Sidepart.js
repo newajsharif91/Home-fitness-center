@@ -2,7 +2,7 @@ import React from "react";
 import "./Sidepart.css";
 import Button from "react-bootstrap/Button";
 
-const Sidepart = () => {
+const Sidepart = ({ cart }) => {
   return (
     <div className="side-section">
       <div className="personal-info">
@@ -29,11 +29,11 @@ const Sidepart = () => {
         <p className="heading">Sdudy Details</p>
         <div className="study-details">
           <small>Total Study Time :</small>
-          <small></small>
+          <small> m</small>
         </div>
         <div className="break-time">
-          <small>Break Time</small>
-          <small></small>
+          <small>Break Time :</small>
+          <small>lol m</small>
         </div>
       </div>
       <div className="btn-last">
