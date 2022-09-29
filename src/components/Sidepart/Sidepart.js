@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./Sidepart.css";
 import Button from "react-bootstrap/Button";
 import BreackTimeButton from "../Breat-time/BreackTimeButton";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Sidepart = ({ cart }) => {
   let total = 0;
@@ -19,9 +21,22 @@ const Sidepart = ({ cart }) => {
 
   // Send it to break time
   const [times, setTimes] = useState([]);
+
+  useEffect(() => {
+    const storedData = localStorage.getItem("breakTime");
+    setTimes(storedData);
+  }, []);
+
   const handleAddBreak = (needTimespera) => {
     setTimes(needTimespera);
+    localStorage.setItem("breakTime", needTimespera);
+    setTimes(setTimes);
   };
+
+  // Toastify
+  function notify() {
+    toast.dark("Hey 👋, You are completed your daily task.");
+  }
 
   return (
     <div className="side-section">
@@ -60,9 +75,10 @@ const Sidepart = ({ cart }) => {
         </div>
       </div>
       <div className="btn-last">
-        <Button className="complete-btn" variant="primary">
+        <Button onClick={notify} className="complete-btn" variant="primary">
           Complete
         </Button>{" "}
+        <ToastContainer />
       </div>
     </div>
   );
