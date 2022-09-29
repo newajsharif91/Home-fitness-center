@@ -1,0 +1,17 @@
+.body-container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+   margin: 10px;
+    padding: 8px;background-color: antiquewhite;
+}
+.body-container-right{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.body-container-left{
+    background-color: rgb(224, 238, 251);
+    border: 1px solid rgb(110, 224, 237);
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px 10px;
+
+}
