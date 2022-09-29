@@ -11,11 +11,14 @@ const Body = () => {
       .then((response) => response.json())
       .then((data) => setSdatas(data));
   }, []);
+  const handleClick = () => {
+    console.log("click");
+  };
   return (
     <div className="body-container">
       <div className="body-container-right">
         {datas.map((dt) => (
-          <Cards key={dt.id} datas={dt}></Cards>
+          <Cards key={dt.id} datas={dt} handleClick={handleClick}></Cards>
         ))}
       </div>
       <div className="body-container-left">
