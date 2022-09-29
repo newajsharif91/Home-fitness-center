@@ -45,6 +45,15 @@
 .break-time{
     margin-top: 15px;
 }
-.Complete-btn{
+.complete-btn{
    margin-top:15px;
+}
+.btn-last{
+    text-align: center;
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 1px 1px 10px 10px(--hover);
+  transform: translateY(-0.50em);
 }

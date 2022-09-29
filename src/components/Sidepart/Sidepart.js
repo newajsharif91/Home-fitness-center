@@ -19,10 +19,10 @@ const Sidepart = () => {
       <div className="break">
         <h5>Add a break</h5>
         <div className="break-duration">
-          <button>10 min</button>
-          <button>20 min</button>
-          <button>25 min</button>
-          <button>30 min</button>
+          <button className="raise">10 min</button>
+          <button className="raise">20 min</button>
+          <button className="raise">25 min</button>
+          <button className="raise">30 min</button>
         </div>
       </div>
       <div className="details-section">
@@ -36,9 +36,11 @@ const Sidepart = () => {
           <small></small>
         </div>
       </div>
-      <Button className="Complete-btn" variant="primary">
-        Complete
-      </Button>{" "}
+      <div className="btn-last">
+        <Button className="complete-btn" variant="primary">
+          Complete
+        </Button>{" "}
+      </div>
     </div>
   );
 };

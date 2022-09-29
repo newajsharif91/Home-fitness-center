@@ -9,30 +9,30 @@
        "id":"63353a4482fadaed1d74c65f",
        "gymImg":"https://i.ibb.co/vYQBhzJ/pexels-sabel-blanco-1756959.jpg",
        "name":"Chest Exercise",
-       "time":"15s"
+       "time":"15"
     },
     {
        "id":"63353a442080a7c643a2e402",
        "gymImg":"https://i.ibb.co/vBV5GfV/240-F-405058390-A6-Ubmk-JWd8-Lx-Um-Dd-E0-KO33-Aw-HXv-Ag-ACg.jpg",
        "name":"Push Up",
-       "time":"30s"
+       "time":"30"
     },
     {
        "id":"63353a44cfe05fe5ed0db31d",
        "gymImg":"https://i.ibb.co/QctGPm3/pexels-anush-gorak-1229356.jpg",
        "name":"Biceps",
-       "time":"45s"
+       "time":"45"
     },
     {
        "id":"63353a44dbc6bded377b21c0",
        "gymImg":"https://i.ibb.co/H2FjMcV/vzgliad-poza-fitnes-muscle-myshtsy-press-atlet-trenazhery-2.jpg",
        "name":"Tryceps",
-       "time":"30s"
+       "time":"30"
     },
     {
        "id":"63353a440a5950af6e06d369",
        "gymImg":"https://i.ibb.co/sKSfR2V/240-F-286098390-D2-J4j-Lb-Ok-Cziku-SXx-QBh26-Ixh-R7t4i28.jpg",
        "name":"Sholder",
-       "time":"15s"
+       "time":"15"
     }
  ]

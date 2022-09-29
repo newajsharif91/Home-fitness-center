@@ -4,6 +4,9 @@ import Card from "react-bootstrap/Card";
 import "./Cards.css";
 
 const Cards = (props) => {
+  const handleClick = () => {
+    console.log("click");
+  };
   console.log(props);
   const { id, gymImg, name, time } = props.datas;
   return (
@@ -12,8 +15,10 @@ const Cards = (props) => {
         <Card.Img variant="top" src={gymImg} className="gymimg" />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
-          <Card.Text>Time Required : {time}</Card.Text>
-          <Button variant="primary">Complete</Button>
+          <Card.Text>Time Required : {time} m</Card.Text>
+          <Button onClick={handleClick} variant="primary" className="card-btn">
+            Complete
+          </Button>
         </Card.Body>
       </Card>
     </div>
