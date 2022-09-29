@@ -16,7 +16,6 @@ const Body = () => {
     // console.log(datas.time);
     const newCart = [...cart, datas];
     setCart(newCart);
-    console.log(newCart);
   };
   return (
     <div className="body-container">

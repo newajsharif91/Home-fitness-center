@@ -17,15 +17,7 @@
     justify-content: space-evenly;
     padding: 10px;
 }
-.break-duration button{
-    border: 2px solid #f6c31d;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 14px;
-    line-height: 15px;
-    padding: 5px;
-    width: 45px;
-}
+
 .side-section{
     margin: 20px;
     padding: 10px;

@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Sidepart.css";
 import Button from "react-bootstrap/Button";
+import BreackTimeButton from "../Breat-time/BreackTimeButton";
 
 const Sidepart = ({ cart }) => {
+  let total = 0;
+  for (const t of cart) {
+    total = total + t.time;
+  }
+
+  // Break Time
+  const [needTimes, setNeedTimes] = useState([]);
+  useEffect(() => {
+    fetch("breakTime.JSON")
+      .then((response) => response.json())
+      .then((data) => setNeedTimes(data));
+  }, []);
+
+  // Send it to break time
+  const [times, setTimes] = useState([]);
+  const handleAddBreak = (needTimespera) => {
+    setTimes(needTimespera);
+  };
+
   return (
     <div className="side-section">
       <div className="personal-info">
@@ -19,21 +39,24 @@ const Sidepart = ({ cart }) => {
       <div className="break">
         <h5>Add a break</h5>
         <div className="break-duration">
-          <button className="raise">10 min</button>
-          <button className="raise">20 min</button>
-          <button className="raise">25 min</button>
-          <button className="raise">30 min</button>
+          {needTimes.map((needTime) => (
+            <BreackTimeButton
+              key={needTime.id}
+              needTime={needTime}
+              handleAddBreak={handleAddBreak}
+            ></BreackTimeButton>
+          ))}
         </div>
       </div>
       <div className="details-section">
         <p className="heading">Sdudy Details</p>
         <div className="study-details">
           <small>Total Study Time :</small>
-          <small> m</small>
+          <small>{total} m</small>
         </div>
         <div className="break-time">
           <small>Break Time :</small>
-          <small>lol m</small>
+          <small>{times}m</small>
         </div>
       </div>
       <div className="btn-last">
